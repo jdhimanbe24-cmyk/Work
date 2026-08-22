@@ -1,0 +1,64 @@
+TEST CASE 1
+Input:
+Name: Priya
+Marks: 85
+
+Expected Output:
+Grade: B
+Message: Very Good! Keep it up!
+
+
+TEST CASE 2
+Input:
+Name: Rahul
+Marks: 95
+
+Expected Output:
+Grade: A
+Message: Excellent! Outstanding performance!
+
+
+TEST CASE 3
+Input:
+Name: Aman
+Marks: 72
+
+Expected Output:
+Grade: C
+Message: Good job! Keep improving!
+
+
+TEST CASE 4
+Input:
+Name: Simran
+Marks: 65
+
+Expected Output:
+Grade: D
+Message: You passed! Keep working harder!
+
+
+TEST CASE 5
+Input:
+Name: Rohan
+Marks: 45
+
+Expected Output:
+Grade: F
+Message: Don't give up! Learn from this and try again!
+
+
+TEST CASE 6 - Invalid Range
+Input:
+Marks: 120
+
+Expected Output:
+Invalid input! Marks must be between 0 and 100.
+
+
+TEST CASE 7 - Invalid Data Type
+Input:
+Marks: hello
+
+Expected Output:
+Invalid input! Please enter a valid number.
