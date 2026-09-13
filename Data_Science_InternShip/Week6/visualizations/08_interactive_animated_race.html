@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Interactive: Cumulative Sales Race</title>
+<script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+<style>
+  body { font-family: -apple-system, Arial, sans-serif; margin: 0; padding: 16px; background: #fafafa; }
+  h2 { color: #2C3E50; margin: 4px 0 12px 0; }
+  #chart { background: white; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.12); }
+</style>
+</head>
+<body>
+<h2>Interactive: Cumulative Sales Race</h2>
+<div id="chart"></div>
+<script>
+  var fig = {"data": [{"type": "bar", "x": ["Laptop", "Tablet", "Phone", "Headphones", "Monitor"], "y": [1981281.0, 892413.0, 937670.0, 241498.0, 67662.0], "marker": {"color": ["#4C72B0", "#DD8452", "#55A868", "#C44E52", "#8172B2"]}}], "layout": {"title": {"text": "Cumulative Product Sales by Month (press Play)"}, "xaxis": {"title": {"text": "Product"}}, "yaxis": {"title": {"text": "Cumulative Total Sales ($)"}, "range": [0, 4278131.0]}, "template": "plotly_white", "height": 550, "updatemenus": [{"type": "buttons", "x": 1.0, "xanchor": "right", "y": 1.18, "yanchor": "top", "buttons": [{"label": "Play", "method": "animate", "args": [null, {"fromcurrent": true, "frame": {"duration": 600, "redraw": true}, "transition": {"duration": 300}}]}, {"label": "Pause", "method": "animate", "args": [[null], {"mode": "immediate", "frame": {"duration": 0}}]}]}], "sliders": [{"active": 0, "x": 0.1, "len": 0.85, "steps": [{"label": "2024-01", "method": "animate", "args": [["2024-01"], {"mode": "immediate", "frame": {"duration": 600, "redraw": true}, "transition": {"duration": 300}}]}, {"label": "2024-02", "method": "animate", "args": [["2024-02"], {"mode": "immediate", "frame": {"duration": 600, "redraw": true}, "transition": {"duration": 300}}]}, {"label": "2024-03", "method": "animate", "args": [["2024-03"], {"mode": "immediate", "frame": {"duration": 600, "redraw": true}, "transition": {"duration": 300}}]}, {"label": "2024-04", "method": "animate", "args": [["2024-04"], {"mode": "immediate", "frame": {"duration": 600, "redraw": true}, "transition": {"duration": 300}}]}]}]}, "frames": [{"name": "2024-01", "data": [{"type": "bar", "x": ["Laptop", "Tablet", "Phone", "Headphones", "Monitor"], "y": [1981281.0, 892413.0, 937670.0, 241498.0, 67662.0], "marker": {"color": ["#4C72B0", "#DD8452", "#55A868", "#C44E52", "#8172B2"]}}]}, {"name": "2024-02", "data": [{"type": "bar", "x": ["Laptop", "Tablet", "Phone", "Headphones", "Monitor"], "y": [2266345.0, 1578890.0, 1776462.0, 314894.0, 839983.0], "marker": {"color": ["#4C72B0", "#DD8452", "#55A868", "#C44E52", "#8172B2"]}}]}, {"name": "2024-03", "data": [{"type": "bar", "x": ["Laptop", "Tablet", "Phone", "Headphones", "Monitor"], "y": [3789208.0, 2292996.0, 2859394.0, 1002628.0, 1317354.0], "marker": {"color": ["#4C72B0", "#DD8452", "#55A868", "#C44E52", "#8172B2"]}}]}, {"name": "2024-04", "data": [{"type": "bar", "x": ["Laptop", "Tablet", "Phone", "Headphones", "Monitor"], "y": [3889210.0, 2884340.0, 2859394.0, 1384033.0, 1348071.0], "marker": {"color": ["#4C72B0", "#DD8452", "#55A868", "#C44E52", "#8172B2"]}}]}]};
+  Plotly.newPlot('chart', fig.data, fig.layout, {responsive: true});
+  Plotly.addFrames('chart', fig.frames);
+
+</script>
+</body>
+</html>

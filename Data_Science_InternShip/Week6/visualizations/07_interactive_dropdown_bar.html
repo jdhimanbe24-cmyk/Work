@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Interactive: Product Performance (Dropdown)</title>
+<script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+<style>
+  body { font-family: -apple-system, Arial, sans-serif; margin: 0; padding: 16px; background: #fafafa; }
+  h2 { color: #2C3E50; margin: 4px 0 12px 0; }
+  #chart { background: white; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.12); }
+</style>
+</head>
+<body>
+<h2>Interactive: Product Performance (Dropdown)</h2>
+<div id="chart"></div>
+<script>
+  var fig = {"data": [{"type": "bar", "x": ["Laptop", "Tablet", "Phone", "Headphones", "Monitor"], "y": [3889210, 2884340, 2859394, 1384033, 1348071], "marker": {"color": ["#4C72B0", "#DD8452", "#55A868", "#C44E52", "#8172B2"]}, "name": "Total Sales ($)"}], "layout": {"title": {"text": "Product Performance (use the dropdown to change metric)"}, "xaxis": {"title": {"text": "Product"}}, "yaxis": {"title": {"text": "Total Sales ($)"}}, "updatemenus": [{"type": "dropdown", "x": 1.0, "xanchor": "right", "y": 1.18, "yanchor": "top", "buttons": [{"label": "Total Sales ($)", "method": "update", "args": [{"y": [[3889210, 2884340, 2859394, 1384033, 1348071]]}, {"yaxis": {"title": {"text": "Total Sales ($)"}}}]}, {"label": "Average Order Value ($)", "method": "update", "args": [{"y": [[162050.41666666666, 110936.15384615384, 142969.7, 92268.86666666667, 89871.4]]}, {"yaxis": {"title": {"text": "Average Order Value ($)"}}}]}, {"label": "Units Sold", "method": "update", "args": [{"y": [[136, 127, 101, 48, 66]]}, {"yaxis": {"title": {"text": "Units Sold"}}}]}, {"label": "Orders Count", "method": "update", "args": [{"y": [[24, 26, 20, 15, 15]]}, {"yaxis": {"title": {"text": "Orders Count"}}}]}]}], "template": "plotly_white", "height": 550}};
+  Plotly.newPlot('chart', fig.data, fig.layout, {responsive: true});
+  
+</script>
+</body>
+</html>
