@@ -1,0 +1,24 @@
+CAPSTONE KEY FINDINGS
+Reducing New-Customer Churn -- Week 8 Capstone
+======================================================================
+
+Overall churn rate: 10.6% (53 of 500 customers)
+100% of churned customers have Tenure <= 11 months
+Churn rate for Tenure <= 12mo: 63.1%
+Churn rate for Tenure > 12mo: 0.0%
+
+Hypothesis tests:
+  - TEST 1: Contract type vs Churn (Chi-square): p=9.587e-07 (SIGNIFICANT)
+  - TEST 2: Payment method vs Churn (Chi-square): p=0.1445 (not significant)
+  - TEST 3: MonthlyCharges -- Churned vs Retained (t-test): p=0.01008 (SIGNIFICANT)
+  - TEST 4: Tenure -- Churned vs Retained (t-test): p=8.982e-130 (SIGNIFICANT)
+  - TEST 5: Senior citizen status vs Churn (Chi-square): p=0.7951 (not significant)
+
+Model performance (held-out test set): Recall=1.00, Precision=0.65, ROC AUC=0.987
+Simple rule (Tenure<12) performance: Recall=1.00, Precision=0.64
+
+Segment churn rates:
+Segment
+1    0.218391
+0    0.047904
+2    0.044025
